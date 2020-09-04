@@ -66,7 +66,7 @@ DESC emp;
 
 hiredate에서 365일 미래의 일자
 별칭 : 컬럼, expression에 새로운 이름을 부여
-      컬럼 | rxpression [AS] [컬럼명]
+      컬럼 | expression [AS] [컬럼명]
 SELECT ename AS emp_name, hiredate,
        hiredate+365 after_1year, hiredate-365 before_1year
 FROM emp;
