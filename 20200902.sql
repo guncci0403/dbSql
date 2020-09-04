@@ -149,6 +149,7 @@ java : primitive type(원시타입) : 8개 - int, long, shot, byte, char, boolea
 sql : ??? 나중에
 
 
+
 문자열 연산
 java
         "Hello," + "world" ==> "Hello,World"
