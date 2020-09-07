@@ -95,7 +95,6 @@ NULL : 아직 모르는 값
  800 + 0 = 800
 
 emp 테이블에서 NULL값을 확인
-
 SELECT ename, sal, comm, sal + comm AS total_sal
 FROM emp;
 
@@ -116,7 +115,7 @@ FROM emp;
 SELECT *
 FROM dept;
 
-SELECT userid, usernm, reg_dt + 5
+SELECT userid, usernm, reg_dt, reg_dt + 5 AS after5day_reg_dt
 FROM users;
 
 실습 select2
@@ -139,7 +138,7 @@ sql : SELECT empno, 10
 문자 Hello, World 라는 문자 값을
 java : String  str = "Hello, world";
                 컬럼 별칭, expression 별칭, 별칭
-sql : SELECT empno, 'hello, world' h--, "Hello, world"
+sql : SELECT empno, 'hello, world' AS "Hello, world"
         FROM emp;
 
 날짜 2020년 9월 2일이라는 날짜 값을..
@@ -160,11 +159,11 @@ python
 sql  | |,  CONCAT 함수 ==> 결합 연산
         emp테이블의 ename, job 컬럼이 문자열
         
-        ename + " " + job
+        ename + " " + job 을 sql에서 나타내고 싶으면
         ename | | ' ' | | job
         
-        CONCAT(문자열1, 문자열2) : 문자열 1과 문자열 2를 합쳐서
-                                                        만들어진 새로운 문자열을 반환해준다
+        CONCAT(문자열1, 문자열2) : 문자열 1과 문자열 2를 합쳐서 만들어진
+                                새로운 문자열을 반환해준다
         
         SELECT ename | | ' ' | | job,
                        CONCAT( CONCAT(ename, ' '), job)
@@ -173,11 +172,13 @@ sql  | |,  CONCAT 함수 ==> 결합 연산
 DESC emp;
 
 USER_TABLES :   오라클에서 관리하는 테이블(뷰)
-                                 접속한 사용자가 보유하고 있는 테이블 정보를 관리
+             접속한 사용자가 보유하고 있는 테이블 정보를 관리
 
 문자열 결합 실습  sel_con1                                 
 SELECT *
 FROM user_tables;
+
+DESC user_tables;
 
 SELECT table_name
 FROM user_tables;
@@ -185,6 +186,7 @@ FROM user_tables;
 SELECT  'SELECT * FORM ' | |  table_name | | ';' AS query
 FROM user_tables;
 
+위에 포함 별칭 3가지방법
 SELECT  table_name query,
                 talble_name "query"
 FROM user_tables;

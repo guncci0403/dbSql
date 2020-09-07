@@ -163,17 +163,39 @@ SELECT *
 FROM emp
 WHERE deptno IN (20, 30)
   AND hiredate >= TO_DATE('19810601', 'YYYYMMDD');
-
+  
+------------------------------------------------------------------------
 11,12,13,14 과제 
 
+where11]
+SELECT *
+FROM emp
+WHERE job IN('SALESMAN')
+  OR hiredate >= TO_DATE('19810601', 'YYYYMMDD');
+  
+where12]
+SELECT *
+FROM emp
+WHERE job IN ('SALESMAN')
+  OR empno LIKE('78%');
+  
+where13]
+SELECT *
+FROM emp
+WHERE job IN ('SALESMAN')
+  OR (empno BETWEEN 78 AND 78
+  OR empno BETWEEN 780 AND 789
+  OR empno BETWEEN 7800 AND 7899);
 연산자 우선순위
 조건 1 OR (조건 2 AND 조건 3)
+
 where 14]
 SELECT *
 FROM emp
-WHERE job IS 'SALESMAN'
-  AND hiredate >= TO_DATE('19810601', 'YYYYMMDD');
-
+WHERE job IN ('SALESMAN')
+   OR empno LIKE('78__')
+   AND hiredate >= TO_DATE('19810601', 'YYYYMMDD');
+------------------------------------------------------------------------
 
 정렬
 **********매우매우 중요***********
