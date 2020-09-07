@@ -194,7 +194,7 @@ SELECT *
 FROM emp
 WHERE job IN ('SALESMAN')
    OR empno LIKE('78__')
-   AND hiredate >= TO_DATE('19810601', 'YYYYMMDD');
+   AND hiredate >= TO_DATE('19810601', 'YYYYMMDD'); 
 ------------------------------------------------------------------------
 
 정렬
