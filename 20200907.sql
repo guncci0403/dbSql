@@ -93,16 +93,16 @@ ROUND : 반올림 함수
 TRUNC : 버림 함수
     ==> 몇번째 자리에서 반올림, 버림을 할지?
     두번째 인자가 0, 양수 ROUND(숫자, 반올림 결과 자리수)
-    두뻔째 인자가 음수 : ROUND(숫자, 반올리 해야되는 위치)
+    두뻔째 인자가 음수 : ROUND(숫자, 반올림 해야되는 위치)
 MOD : 나머지를 구하는 함수
 
-SELECT ROUND(105.54, 1)round,
+SELECT ROUND(105.54, 1) round,
        ROUND(105.55, 1) round2,
        ROUND(105.55, 0) round3,
        ROUND(105.55, -1) round4       
 FROM  dual;
 
-SELECT TRUNC(105.54, 1)trunc,
+SELECT TRUNC(105.54, 1) trunc,
        TRUNC(105.55, 1) trunc2,
        TRUNC(105.55, 0) trunc3,
        TRUNC(105.55, -1) trunc4       

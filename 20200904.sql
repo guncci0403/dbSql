@@ -16,8 +16,8 @@ WHERE 절 : 스프레드 시트
                 IN
 연산자를 배울 때 (복습할 때) 기억할 부분은 해당 연산자 x항 연산자 인지하자
 
-1                      +                   5
-피연산자    연산자         피연산자
+1           +          5
+피연산자    연산자     피연산자
 
 a++     :   단항 연산자
 
@@ -27,7 +27,7 @@ BETWEEN AND :   비교대상    BETWEEN     시작값     AND  종료값
 IN    :     비교대상 IN (값1,    값2.....)
 LIKE    :   비교대상 LIKE   '매칭문자열  %   _   '
 
-WHERE derptno BETWEEN 30 AND 50;
+WHERE deptno BETWEEN 30 AND 50;
 
 SELECT *
 FROM    emp
