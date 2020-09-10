@@ -64,7 +64,7 @@ SELECT ename, LOWER(ename)
 FROM emp
 WHERE ename = UPPER('smith'); ==> 이것을 사용
 
-SWLECT ename, LOWER(ename)
+SELECT ename, LOWER(ename)
 FROM emp
 WHERE ename = 'SMITH'
 
@@ -151,7 +151,7 @@ sql 'Hello,World', 5
 java "Hello, World", 5
 날짜를 어떻게 표현할까?
 java : java.util.Date
-sql : nsl 포맷에 성절된 문자열 형식을 따르거나
+sql : nsl 포맷에 설정된 문자열 형식을 따르거나
     ==> 툴 때문일 수도 있음 예측하기 힘듬.
     TO_DATE 함수를 이용하여 명확하게 명시
     TO_DATE('날짜 문자열', '날짜 문자열 형식')
