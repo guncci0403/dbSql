@@ -182,6 +182,9 @@ FROM users;
 
 
 
+desc emp;
+DESC dept;
+
 SELECT *
-FROM emp
+FROM users;
 ORDER BY deptno;
