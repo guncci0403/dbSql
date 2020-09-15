@@ -1,4 +1,4 @@
-outerjoin1]
+outerjoin1] 
 SELECT *
 FROM prod;
 
