@@ -9,7 +9,7 @@ SYSDATE(날짜)를 이용하여 현재 월의 1일자 날짜로 변경하기
 
 NULL 관련 함수 - NULL과 관련된 연산의 결과는 NULL
 총 4가지 존재, 다 외우진 않아도 괜찮음. 본인이 편한 함수로 하나 정해서 사용 방법을 숙지.
-1.NVL(expr1, epxr2)
+1.NVL(expr1, expr2)
     if(expr1 == null)
         System.out.println(expr2);
     else

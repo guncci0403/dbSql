@@ -257,7 +257,9 @@ SELECT *
 FROM emp, dept
 WHERE emp.empno = 7369
   AND emp.deptno != dept.deptno;
-  
+
+select *
+FROM dept;
 
 sal를 이용하여 등급을 구하기
 SELECT *
