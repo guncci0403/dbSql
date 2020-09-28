@@ -1,5 +1,5 @@
 sub7]
-SELECT CYCLE.CID, c.cnm, p.pid, day, cnt
+SELECT CYCLE.CID, c.cnm, p.pid, p.pnm, day, cnt
 FROM cycle, customer c, product p 
 WHERE cycle.cid = 1
   AND cycle.cid = c.cid
@@ -85,7 +85,7 @@ ORDER BY p_sal DESC;
 sql은 크게 4가지
 그중 SELECT 끝
 나머지 3개 시작
-DML : Data Manipulate Language
+DML : Data Manipulate Language 데이터를 다루는 언어
 1. SELECT ***********
 2. INSERT : 테이블에 새로운 데이터를 입력하는 명령
 3. UPDATE : 테이블에 존재하는 데이터의 컬럼을 변경하는 명령 
@@ -103,7 +103,7 @@ WHERE empno = 9999;
 
 empno컬럼의 설정이 NOT NULL 이기 때문에 empno 컬럼에 NULL 값이 들어갈 수 없어서 에러가 발생
 INSERT INTO emp (ename) VALUES ('sally');
-
+rollback;
 2.테이블의 모든컬럼에 모든 데이터를 입력할 때
     **** 단 값을 나열하는 순서는 테이블의 정의된 컬럼 순서대로 기술 해야한다.
          테이블 컬럼 순서 확인 방법 : DESC 테이블명
@@ -219,6 +219,7 @@ DBMS 는 복구를위해 로그를 남긴다
 하지만 개발 환경에서는 데이터를 복구할 필요가 없기 때문에 삭제 속도를 빠르게 하는 것ㅇ ㅣ개발 효율성에서 좋음.
 
 로그없이 테이블의 모든 데이터를 삭제하는 방법 : TRUNCATE TABLE  테이블명;
-
+SELECT *
+FROM bonus;
 DELETE emp;
-TRUNCATE TABEL emp;
+TRUNCATE TABLE emp;
