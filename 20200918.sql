@@ -72,7 +72,7 @@ ORACLE에서 만들수 있는 제약조건이 5가지
 1. NOT NULL : 컬럼에 반드시 값이 들거가게 하는 조ㅔ약조건
 2. UNIQUE : 해당 컬럼에 중복된 값이 들어오는 것을 방지하는 제약조건
 3. PRIMARY KEY : UNIQUE + NOT NULL
-4. FOREIGN KEY : 해당 컬럼이 참조하는 다른 테이블의 컬럼에 값이 존재하야 하는 제약조건
+***4. FOREIGN KEY : 해당 컬럼이 참조하는 다른 테이블의 컬럼에 값이 존재하야 하는 제약조건
                  emp.deptno ==> dept.deptno
 5. CHECK : 컬럼에 들어갈 수 있는 값을 제한하는 제약조건
           ex) 성별이라는 컬럼 있다고 가정
@@ -198,8 +198,7 @@ INSERT INTO dept_test VALUES ( 90, 'ddit', 'daejeon');
 
 
 
-
-FOREIGN KEY 제약조건 : 참조하는 테이블에 데이터만 입력가능하도록 제어
+*****FOREIGN KEY 제약조건 : 참조하는 테이블에 데이터만 입력가능하도록 제어
 다른 제약조건과 다르게 두개의 테이블간의 제약조건 설정
 1. dept_test (부모) 테이블 생성
 2. emp_test(자식) 테이블 생성
@@ -506,6 +505,8 @@ CREATE TABLE emp_test (
     ename VARCHAR2(10),
     deptno NUMBER(2)
 );
+
+**************************************************************************실습
 1. dept_test 테이블의 deptno컬럼에 PRIMARY KEY 제약조건 추가
 ALTER TABLE dept_test ADD CONSTRAINT PK_DEPT_TEST PRIMARY KEY (deptno);
 
