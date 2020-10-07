@@ -231,7 +231,7 @@ FROM dept_h
 START WITH deptcd = 'dept0'
 CONNECT BY PRIOR deptcd = p_deptcd;
 
-SELECT deptcd, LPAD(' ', LEVEL*3) || deptnm deptnm
+SELECT deptcd, LPAD(' ', (LEVEL-1)*3) || deptnm deptnm
 FROM dept_h
 START WITH deptcd = 'dept0'
 CONNECT BY PRIOR deptcd = p_deptcd;
