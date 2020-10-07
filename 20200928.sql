@@ -24,7 +24,7 @@ h_2]
 SELECT level lv, deptcd, LPAD(' ', (LEVEL-1)*3) || deptnm deptnm, p_deptcd
 FROM dept_h
 START WITH deptcd = 'dept0_02'
-CONNECT BY PRIOR deptcd = p_deptcd;
+CONNECT BY  deptcd = PRIOR p_deptcd;
 
 계층쿼리 - 상향식
 디자인팀(dept0_00_0) 부터 시작하여 자신의 상위 부서로 연결하는 쿼리
@@ -94,14 +94,15 @@ connect by level
 DUMMY테이블에는 행이 하나
 
 SELECT dummy, LEVEL, LTRIM(SYS_CONNECT_BY_PATH(dummy, '-'), '-') scbp
-FROM dual;
+FROM dual
 CONNECT BY LEVEL <= 10;
 
-SELECT dummy, LEVEL, LTRIM(SYS_CONNECT_BY_PATH(dummy, '-'), '-') scbp
+SELECT  LEVEL, deptno, LTRIM(SYS_CONNECT_BY_PATH(deptno, '-'), '-') scbp
 FROM (SELECT deptno
-FROM dual
-WEHRE deptno IN (10, 20))
-CONNECT BY LEVEL <= 10;
+FROM dept
+WHERE deptno IN (10, 20))
+CONNECT BY LEVEL < 5
+ORDER BY LEVEL, deptno;
 
 SELECT *
 FROM board_test;
