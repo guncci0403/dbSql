@@ -94,7 +94,7 @@ DESC dept;
 INSERT INTO dept VALUES (99, 'ddit', 'daejeon');
 
 SELECT *
-FROM dept
+FROM dept;
 WHERE deptno NOT IN (10, 20, 30, 10, 20, 30, 30, 30, 30);
 
 SELECT *
@@ -193,7 +193,8 @@ WHERE NOT EXISTS (SELECT *
 SELECT *
 FROM product
 WHERE pid = 100;
-
+SELECT *
+FROM product
 WHERE EXISTS (SELECT *
               FROM cycle
               WHERE cid = 1

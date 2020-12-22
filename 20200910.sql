@@ -138,15 +138,16 @@ FROM emp
 group by TO_CHAR(hiredate,'YYYYMM');
 
 grp5,6,7] 과제
+5]
 SELECT TO_CHAR(hiredate,'YYYY') hire_yyyy , COUNT(*)cnt
 FROM emp
 group by TO_CHAR(hiredate,'YYYY');
 
-
+6]
 SELECT COUNT(*)cnt
 FROM dept;
 
-
+7]
 SELECT count(*)
 FROM( SELECT deptno
       FROM emp

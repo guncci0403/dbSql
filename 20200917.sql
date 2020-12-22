@@ -127,6 +127,7 @@ INSERT INTO emp (empno, ename)
 SELECT 9997, 'cony' FROM dual
 UNION ALL
 SELECT 9996, 'moon' FROM dual;
+rollback;
 
 SELECT *
 FROM emp;
@@ -222,4 +223,5 @@ DBMS 는 복구를위해 로그를 남긴다
 SELECT *
 FROM bonus;
 DELETE emp;
+rollback;
 TRUNCATE TABLE emp;

@@ -98,7 +98,7 @@ GROUP BY deptno;
 질문] GROUP BY 를 사용하면 WHERE 절을 사용 못하냐?
 GROUP BY에 대상이 되는 행들을 제한할 때 WHERE 절을 사용
 
-SELECT deptno, COUNT(*), C
+SELECT deptno, COUNT(*) c
 FROM emp
 WHERE sal > 1000
 GROUP BY deptno;
@@ -270,13 +270,15 @@ WHERE emp.deptno = dept.deptno
 1. SELF JOIN : 조인하는 테이블이 서로 같은 경우
 
 SELECT e.empno, e.ename, e.mgr, m.ename
-FROM emp e JOIN emp m ON ( e.mgr = m.empno)
+FROM emp e JOIN emp m ON (e.mgr = m.empno)
 
 ORACLE 문법
 SELECT e.empno, e.ename, e.mgr, m.ename
 FROM emp e, emp m
 WHERE e.mgr = m.empno;
 
+SELECT *
+FROM emp;
 KING의 경우 mgr 컬럼의 값이 NULL 이기 때문에 e.mgr = m.empno 조건을 충족 시키지 못함
 그래서 조인 실패해서 14건중 13건에 데이터만 조회
 

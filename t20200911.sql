@@ -70,7 +70,12 @@ FROM emp JOIN dept ON (emp.deptno = dept.deptno)
 WHERE emp.sal > 2500
   AND emp.empno > 7600
 ORDER BY emp.deptno;
-
+SELECT emp.empno, emp.ename, emp.sal, emp.deptno, dept.dname
+FROM emp, dept
+WHERE emp.deptno = dept.deptno
+  AND emp.sal > 2500
+  AND emp.empno > 7600
+ORDER BY emp.deptno;
 
 join0_4]
 SELECT emp.empno, emp.ename, emp.sal, emp.deptno, dept.dname

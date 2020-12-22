@@ -17,7 +17,7 @@ FROM prod p LEFT OUTER JOIN buyprod b ON (p.PROD_ID = b.BUY_PROD AND b.BUY_DATE 
 
 outerjoin2,3]
 
-SELECT  TO_DATE(:yyyymmdd, 'YYYY/MM/DD'), BUY_DATE, b.BUY_PROD, p.PROD_ID, p.PROD_NAME, NVL(b.BUY_QTY,0)
+SELECT  NVL(BUY_DATE, TO_DATE(:yyyymmdd, 'YYYY/MM/DD')) buy_date, b.BUY_PROD, p.PROD_ID, p.PROD_NAME, NVL(b.BUY_QTY,0)
 FROM prod p, buyprod b 
 WHERE p.PROD_ID = b.BUY_PROD (+)
   AND b.BUY_DATE (+) = TO_DATE(:yyyymmdd, 'YYYY/MM/DD');
